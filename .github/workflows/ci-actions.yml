@@ -24,7 +24,7 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: "Maven install"
         run: |
-          mvn -Pstaging install -DskipTests=true -B -V
+          mvn -Pstaging install -DskipTests=true -Dno-format -B -V
       - name: "Maven test"
         run: |
           mvn -Pstaging test -B
