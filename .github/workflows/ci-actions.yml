@@ -32,11 +32,12 @@ jobs:
       - name: "Maven install"
         run: |
           mvn -Pstaging install -DskipTests=true -Dno-format -B -V
-      - name: "Maven test"
-        run: |
-          mvn -Pstaging test -B
       - name: "Upload spec files"
         uses: actions/upload-artifact@v4
+        if: matrix.java == 25
         with:
           name: spec-documents
           path: spec/target/generated-docs/cdi-spec.*
+      - name: "Maven test"
+        run: |
+          mvn -Pstaging test -B
