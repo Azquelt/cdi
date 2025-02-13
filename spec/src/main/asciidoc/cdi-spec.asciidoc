@@ -37,6 +37,8 @@ include::preface.asciidoc[]
 
 = Introduction
 
+Hello!
+
 include::architecture.asciidoc[]
 
 [[part_1]]
