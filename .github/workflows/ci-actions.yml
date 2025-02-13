@@ -37,6 +37,7 @@ jobs:
           mvn -Pstaging test -B
       - name: "Upload spec files"
         uses: actions/upload-artifact@v4
+        if: matrix.java == 21
         with:
           name: spec-documents
           path: spec/target/generated-docs/cdi-spec.*
