@@ -81,6 +81,8 @@ public interface InvokerBuilder<T> {
      */
     InvokerBuilder<T> withArgumentLookup(int position);
 
+    InvokerBuilder<T> withAsyncHandler(Class<? extends InvokerAsyncHandler> handlerClass);
+
     /**
      * Returns the built {@link Invoker} or some representation of it. Implementations are allowed
      * but not required to reuse already built invokers when possible.
