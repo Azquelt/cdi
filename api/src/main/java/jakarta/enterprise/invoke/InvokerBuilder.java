@@ -81,6 +81,7 @@ public interface InvokerBuilder<T> {
      */
     InvokerBuilder<T> withArgumentLookup(int position);
 
+    @SuppressWarnings("rawtypes")
     InvokerBuilder<T> withAsyncHandler(Class<? extends InvokerAsyncHandler> handlerClass);
 
     /**
